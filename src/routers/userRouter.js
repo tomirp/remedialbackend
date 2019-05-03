@@ -154,7 +154,7 @@ router.get('/users', async(req, res)=> {
         if(err) return res.send(err)
 
         if(!result[0].avatar) return res.send({user: result[0]})
-        return res.send({user:result[0], photo: `http://localhost:2010/upstore/${result[0].avatar}`})
+        return res.send({user:result[0], photo: ` https://tommydbsql.herokuapp.com/upstore/${result[0].avatar}`})
     })
 })
 

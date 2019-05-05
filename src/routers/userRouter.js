@@ -50,7 +50,8 @@ router.post('/upstore', upstore.single('avatar'), (req, res) => {
     })
 })
 
-router.post('/users', async (req, res) => { // CREATE USER
+//CREATE USER
+router.post('/users', async (req, res) => { 
     var sql = `INSERT INTO users SET  ?` // Tanda tanya akan digantikan oleh variable data
     var sql2 = `SELECT * FROM users`
     var data = req.body // Object dari user {username, name, email, password}
@@ -96,6 +97,8 @@ router.post('/users/login', (req, res) => { // LOGIN USER
     })
 })
 
+
+//VERIFY USER
 router.get('/verify', (req, res) => {
     const username = req.query.username
     const sql = `UPDATE users SET verified = true WHERE username = '${username}'`

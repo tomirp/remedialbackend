@@ -4,7 +4,7 @@ const conn = mysql.createConnection({
     user: 'root',
     password: 'Mysql123',
     host: '127.0.0.1',
-    database:'ujianbackend',
+    database:'remedialbackend',
     port: '3306'
 })
 

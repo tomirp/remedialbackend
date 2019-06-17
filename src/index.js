@@ -1,7 +1,6 @@
 const express = require('express')
-const catgRouter = require('./routers/catgRouter')
-const movcatRouter = require('./routers/movcatRouter')
-const moviesRouter = require('./routers/moviesRouter')
+const karyawan = require('./routers/karyawan')
+// const select = require 
 
 
 const app = express()
@@ -15,9 +14,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use(express.json())
-app.use(catgRouter)
-app.use(movcatRouter)
-app.use(moviesRouter)
+app.use(karyawan)
 
 
 app.listen(port, () => {
